@@ -1,0 +1,8 @@
+a 1, su allocator debería incrementar el número de slabs al doble del tamaño anterior. La
+función devolver_cache busca el slab asociado al objeto, y lo marca como DISPONIBLE.
+La función destruir_cache debe liberar toda la memoria asignada (SlabAlloc, Slabs y el
+bloque donde están los objetos). Antes de liberar el bloque donde están los objetos,
+debe llamar a la función destructor, sobre cada uno de los objetos.
+En el archivo objetos.h, Uds. pueden declarar los objetos así como sus constructores y
+destructores que podremos usar con el allocator. Para este proyecto, declaren tres tipos
+de objetos distintitos. Se provee un objeto de ejemplo.
